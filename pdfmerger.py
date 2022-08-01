@@ -1,6 +1,6 @@
 import PyPDF2
-import os
 import datetime as dt
+import webbrowser as wb
 
 #Formatting a string with current date
 
@@ -16,5 +16,6 @@ def merge_pdfs(files, writepath):
             merger.append(file)
     
     merger.write(writepath + '/' + date + '_merged.pdf')
+    
     merger.close()
-
+    wb.open_new(writepath + '/' + date + '_merged.pdf')

@@ -14,11 +14,7 @@ def merge_pdfs(files, writepath):
     for file in files:
         if file.endswith('.pdf'):
             merger.append(file)
-    merger.write(writepath + date + '_merged.pdf')
-    merger.close()
     
-files = os.listdir(os.curdir)
-writepath = './pdfmerger/'
-
-merge_pdfs(files, writepath)
+    merger.write(writepath + '/' + date + '_merged.pdf')
+    merger.close()
 
